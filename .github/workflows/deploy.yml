@@ -16,7 +16,7 @@ jobs:
       - run: npm install
       - uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-arn: arn:aws:iam::051826729213:role/GitHubRole
+          role-to-assume: arn:aws:iam::051826729213:role/GitHubRole
           aws-region: us-east-1
       - uses: pulumi/actions@v5
         with:
