@@ -11,8 +11,6 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - name: Login to Pulumi
-        run: pulumi login --non-interactive --token ${{ secrets.PULUMI_ACCESS_TOKEN }}
       - uses: pulumi/actions@v5
         with:
           command: up
